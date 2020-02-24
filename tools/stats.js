@@ -94,7 +94,7 @@ var checkBlockDBExistsThenWrite = function (web3, blockData, nextBlock, endNumbe
         'gasLimit': blockData.gasLimit,
         'miner': blockData.miner,
         'blockTime': (nextBlock.timestamp - blockData.timestamp) / (nextBlock.number - blockData.number),
-        'uncleCount': blockData.uncles.length,
+        'uncleCount': 0,
       };
       new BlockStat(stat).save((err, s, count) => {
         if (!('quiet' in config && config.quiet === true)) {

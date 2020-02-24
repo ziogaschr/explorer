@@ -83,6 +83,9 @@ function baToString(ba) {
 }
 
 var hex2ascii = function (hexIn) {
+  if (typeof hexIn === 'undefined') {
+    return '';
+  }
   const hex = hexIn.toString();
   let str = '';
 
